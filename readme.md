@@ -1,6 +1,6 @@
 # Todo Application
 
-1. display all of the items on the todo list
+1. display all the items on the todo list
 2. add new items to the todo list
 3. mark an item as complete from the todo list
     a. completed list & uncompleted list
@@ -10,7 +10,15 @@
 6. list all uncompleted items
 7. list all delete items
 
-## Display all of the items on the todo list
+bugs
+- form submission issue
+- mark an item complete because we are finding the item by a non unique name
+
+QOL improvements
+- bootstrap
+- menu complete, uncompleted, deleted
+
+## Display all the items on the todo list
 
 - todo list (arrayList<TodoItem>)
   - DataRepo/TodoListRepo
