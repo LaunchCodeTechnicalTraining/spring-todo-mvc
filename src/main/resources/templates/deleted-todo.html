@@ -6,7 +6,7 @@
 </head>
 <body>
 <!-- todoList ${todoList} -->
-
+<div th:replace="fragments :: menu"></div>
 <h3>Deleted Todo Items:</h3>
 <th:block th:each="todoItem : ${todoList}">
   <ul>

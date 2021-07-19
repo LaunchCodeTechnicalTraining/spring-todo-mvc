@@ -6,6 +6,7 @@
 </head>
 <body>
 <!-- todoList ${todoList} -->
+<div th:replace="fragments :: menu"></div>
 <h3>Add a new Todo Item:</h3>
 <form method="post" action="/todo">
     <label>New Item Name: <input type="text" name="value"></label>
