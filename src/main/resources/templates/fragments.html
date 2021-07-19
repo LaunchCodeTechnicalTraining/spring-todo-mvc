@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<head th:fragment="head">
+
+    <!-- Bootstrap stylesheets and script -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+
+    <title>My Todo List</title>
 </head>
 <body>
 <div th:fragment="menu">
-  <h1>MENU</h1>
+  <h5>MENU</h5>
+    <ul>
+        <li><a href="/todo">All Todo Items</a></li>
+        <li><a href="/todo/finished">Finished Todo Items</a></li>
+        <li><a href="/todo/unfinished">Unfinished Todo Items</a></li>
+        <li><a href="/todo/deleted">Previously Deleted Todo Items</a></li>
+    </ul>
+
 </div>
 </body>
 </html>
