@@ -18,4 +18,4 @@
 - controller/TodoController
   - /todo
     - GET /todo -> return the entire todolist
-    - ? GET /todo?id={id}
+
