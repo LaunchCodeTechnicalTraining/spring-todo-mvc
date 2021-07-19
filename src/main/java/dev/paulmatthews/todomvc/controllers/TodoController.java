@@ -47,4 +47,16 @@ public class TodoController {
         model.addAttribute("todoList", TodoListData.getCompletedTodoItems());
         return "todo";
     }
+
+    @GetMapping(value = "/unfinished")
+    public String getUnFinishedItems(Model model) {
+        model.addAttribute("todoList", TodoListData.getUncompletedTodoItems());
+        return "todo";
+    }
+
+    @GetMapping(value = "/deleted")
+    public String getDeletedItems(Model model) {
+        model.addAttribute("todoList", TodoListData.getDeletedItems());
+        return "deleted-todo";
+    }
 }

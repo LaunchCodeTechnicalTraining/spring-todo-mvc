@@ -8,7 +8,7 @@
 4. remove an item from (both completed and uncompleted?)
 5. list all completed items
 6. list all uncompleted items
-7. list all delete items
+7. list all deleted items
 
 bugs
 - form submission issue
@@ -16,7 +16,7 @@ bugs
 
 QOL improvements
 - bootstrap
-- menu complete, uncompleted, deleted
+- menu: all, complete, uncompleted, deleted
 
 ## Display all the items on the todo list
 
