@@ -38,4 +38,14 @@ public class TodoListData {
         }
         return null;
     }
+
+    public static ArrayList<TodoItem> getCompletedTodoItems() {
+        ArrayList<TodoItem> completedItems = new ArrayList<>();
+        for(TodoItem todoItem : todoItems) {
+            if(todoItem.getCompleted()) {
+                completedItems.add(todoItem);
+            }
+        }
+        return completedItems;
+    }
 }

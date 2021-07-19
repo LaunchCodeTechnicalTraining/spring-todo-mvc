@@ -41,4 +41,10 @@ public class TodoController {
         model.addAttribute("todoList", TodoListData.getAllTodoItems());
         return "todo";
     }
+
+    @GetMapping(value = "/finished")
+    public String getFinishedItems(Model model) {
+        model.addAttribute("todoList", TodoListData.getCompletedTodoItems());
+        return "todo";
+    }
 }
