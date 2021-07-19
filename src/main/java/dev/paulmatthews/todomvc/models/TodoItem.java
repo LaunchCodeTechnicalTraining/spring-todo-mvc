@@ -1,10 +1,11 @@
 package dev.paulmatthews.todomvc.models;
 
-public class TodoItem {
+public class TodoItem extends AbstractEntity {
     private String name;
     private Boolean completed;
 
     public TodoItem(String name) {
+        super();
         this.name = name;
         this.completed = false;
     }

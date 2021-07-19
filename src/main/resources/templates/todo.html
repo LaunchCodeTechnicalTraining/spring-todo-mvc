@@ -16,10 +16,11 @@
 <th:block th:each="todoItem : ${todoList}">
     <ul>
 <!--    <li th:text="'Name: ' + ${todoItem.getName()} + ' Completed: ' + ${todoItem.getCompleted()}"></li>-->
+        <li th:text="'ID: ' + ${todoItem.getId()}"></li>
         <li th:text="'Name: ' + ${todoItem.getName()}"></li>
         <li th:text="'Completed: ' + ${todoItem.getCompleted()}"></li>
 <!--        <a th:href="@{/order/details(id=${order.id})}">-->
-        <li><a th:href="@{/todo/complete(name=${todoItem.getName()})}">Mark as Complete</a></li>
+        <li><a th:href="@{/todo/complete(id=${todoItem.getId()})}">Mark as Complete</a></li>
     </ul>
 </th:block>
 

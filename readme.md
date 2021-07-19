@@ -12,7 +12,7 @@
 
 bugs
 - form submission issue
-- mark an item complete because we are finding the item by a non unique name
+- mark an item complete doesn't always work because we are finding the item by a non unique name (it's using an id now)
 
 QOL improvements
 - bootstrap

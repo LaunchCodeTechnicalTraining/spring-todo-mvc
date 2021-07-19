@@ -15,6 +15,15 @@ public class TodoListData {
         todoItems.add(todoItem);
     }
 
+    public static TodoItem getTodoItemById(int id) {
+        for(TodoItem todoItem : todoItems) {
+            if(todoItem.getId() == id) {
+                return todoItem;
+            }
+        }
+        return null;
+    }
+
     public static TodoItem getTodoItemByName(String name) {
         for(TodoItem todoItem : todoItems) {
             if(todoItem.getName().equals(name)) {
