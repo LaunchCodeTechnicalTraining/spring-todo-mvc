@@ -9,6 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TodoMvcApplication {
 
 	public static void main(String[] args) {
+
+		// for manual testing purposes only
+		TodoListData.addTodoItem(new TodoItem("dishes"));
+		TodoListData.addTodoItem(new TodoItem("laundry"));
+		TodoListData.addTodoItem(new TodoItem("cook dinner"));
+		TodoListData.addTodoItem(new TodoItem("walk bernie"));
+		// end manual testing
 		SpringApplication.run(TodoMvcApplication.class, args);
 	}
 

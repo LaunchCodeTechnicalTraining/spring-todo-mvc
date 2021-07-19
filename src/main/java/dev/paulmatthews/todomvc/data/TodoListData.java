@@ -14,4 +14,13 @@ public class TodoListData {
     public static void addTodoItem(TodoItem todoItem) {
         todoItems.add(todoItem);
     }
+
+    public static TodoItem getTodoItemByName(String name) {
+        for(TodoItem todoItem : todoItems) {
+            if(todoItem.getName().equals(name)) {
+                return todoItem;
+            }
+        }
+        return null;
+    }
 }

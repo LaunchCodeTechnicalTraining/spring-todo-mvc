@@ -27,4 +27,11 @@ public class TodoController {
         model.addAttribute("todoList", TodoListData.getAllTodoItems());
         return "todo";
     }
+
+    @GetMapping(value = "/complete")
+    public String markItemAsComplete(@RequestParam String name, Model model) {
+        TodoListData.getTodoItemByName(name).markComplete();
+        model.addAttribute("todoList", TodoListData.getAllTodoItems());
+        return "todo";
+    }
 }

@@ -16,4 +16,8 @@ public class TodoItem {
     public Boolean getCompleted() {
         return completed;
     }
+
+    public void markComplete() {
+        this.completed = true;
+    }
 }
