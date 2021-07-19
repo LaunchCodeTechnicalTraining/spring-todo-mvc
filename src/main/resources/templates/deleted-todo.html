@@ -3,6 +3,7 @@
 <head th:replace="fragments :: head"></head>
 <body>
 <!-- todoList ${todoList} -->
+<div class="container-fluid">
 <div th:replace="fragments :: menu"></div>
 <h3>Deleted Todo Items:</h3>
 <th:block th:each="todoItem : ${todoList}">
@@ -13,6 +14,6 @@
     <li th:text="'Completed: ' + ${todoItem.getCompleted()}"></li>
   </ul>
 </th:block>
-
+</div>
 </body>
 </html>

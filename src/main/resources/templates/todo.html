@@ -3,27 +3,28 @@
 <head th:replace="fragments :: head"></head>
 <body>
 <!-- todoList ${todoList} -->
-<div th:replace="fragments :: menu"></div>
-<h3>Add a new Todo Item:</h3>
-<form method="post" action="/todo">
-    <label>New Item Name: <input type="text" name="value"></label>
-    <input type="submit" value="Add Item">
-</form>
+<div class="container-fluid">
+    <div th:replace="fragments :: menu"></div>
+    <h3>Add a new Todo Item:</h3>
+    <form method="post" action="/todo">
+        <label>New Item Name: <input type="text" name="value"></label>
+        <input type="submit" value="Add Item">
+    </form>
 
-<h3>Todo Items:</h3>
-<th:block th:each="todoItem : ${todoList}">
-    <ul>
-<!--    <li th:text="'Name: ' + ${todoItem.getName()} + ' Completed: ' + ${todoItem.getCompleted()}"></li>-->
-        <li th:text="'ID: ' + ${todoItem.getId()}"></li>
-        <li th:text="'Name: ' + ${todoItem.getName()}"></li>
-        <li th:text="'Completed: ' + ${todoItem.getCompleted()}"></li>
-<!--        <a th:href="@{/order/details(id=${order.id})}">-->
-        <th:block th:if="${!todoItem.getCompleted()}">
-            <li><a th:href="@{/todo/complete(id=${todoItem.getId()})}">Mark as Complete</a></li>
-        </th:block>
-        <li><a th:href="@{/todo/delete(id=${todoItem.getId()})}">Delete Item</a></li>
-    </ul>
-</th:block>
-
+    <h3>Todo Items:</h3>
+    <th:block th:each="todoItem : ${todoList}">
+        <ul>
+    <!--    <li th:text="'Name: ' + ${todoItem.getName()} + ' Completed: ' + ${todoItem.getCompleted()}"></li>-->
+            <li th:text="'ID: ' + ${todoItem.getId()}"></li>
+            <li th:text="'Name: ' + ${todoItem.getName()}"></li>
+            <li th:text="'Completed: ' + ${todoItem.getCompleted()}"></li>
+    <!--        <a th:href="@{/order/details(id=${order.id})}">-->
+            <th:block th:if="${!todoItem.getCompleted()}">
+                <li><a th:href="@{/todo/complete(id=${todoItem.getId()})}">Mark as Complete</a></li>
+            </th:block>
+            <li><a th:href="@{/todo/delete(id=${todoItem.getId()})}">Delete Item</a></li>
+        </ul>
+    </th:block>
+</div>
 </body>
 </html>
