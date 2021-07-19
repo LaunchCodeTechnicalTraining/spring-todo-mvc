@@ -21,6 +21,7 @@
         <li th:text="'Completed: ' + ${todoItem.getCompleted()}"></li>
 <!--        <a th:href="@{/order/details(id=${order.id})}">-->
         <li><a th:href="@{/todo/complete(id=${todoItem.getId()})}">Mark as Complete</a></li>
+        <li><a th:href="@{/todo/delete(id=${todoItem.getId()})}">Delete Item</a></li>
     </ul>
 </th:block>
 

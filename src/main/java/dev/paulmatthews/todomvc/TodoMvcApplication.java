@@ -15,6 +15,7 @@ public class TodoMvcApplication {
 		TodoListData.addTodoItem(new TodoItem("laundry"));
 		TodoListData.addTodoItem(new TodoItem("cook dinner"));
 		TodoListData.addTodoItem(new TodoItem("walk bernie"));
+		TodoListData.removeTodoItem(1);
 		// end manual testing
 		SpringApplication.run(TodoMvcApplication.class, args);
 	}

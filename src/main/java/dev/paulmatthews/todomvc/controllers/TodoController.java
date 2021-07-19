@@ -34,4 +34,11 @@ public class TodoController {
         model.addAttribute("todoList", TodoListData.getAllTodoItems());
         return "todo";
     }
+
+    @GetMapping(value = "/delete")
+    public String deleteItem(@RequestParam int id, Model model) {
+        TodoListData.removeTodoItem(id);
+        model.addAttribute("todoList", TodoListData.getAllTodoItems());
+        return "todo";
+    }
 }

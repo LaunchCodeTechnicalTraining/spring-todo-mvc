@@ -24,6 +24,12 @@ public class TodoListData {
         return null;
     }
 
+    public static void removeTodoItem(int id) {
+        todoItems.remove(getTodoItemById(id));
+        // loop through all of the todoItems
+        // compare the provided id, to the todoItem.Id() if they equal each other grabbed its index
+    }
+
     public static TodoItem getTodoItemByName(String name) {
         for(TodoItem todoItem : todoItems) {
             if(todoItem.getName().equals(name)) {
