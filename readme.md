@@ -22,8 +22,14 @@
 ## Add new items to TodoList
 
 - update TodoList
-    - right now it's public, it should probably be private -- and then we can add a static addTodItem method to interface with it
-    - add getAllTodoItems() method to the data layer
-    - create a new view with a form for adding a new Todo Item
-    - GET /todo -> update it has a form for adding new TodoItems
-    - POST /todo?name={todoName}
+  - right now it's public, it should probably be private -- and then we can add a static addTodoItem method to interface with it
+  - add getAllTodoItems() method to the data layer
+  - create a new view with a form for adding a new Todo Item
+  - GET /todo -> update it has a form for adding new TodoItems
+  - POST /todo?name={todoName}
+    
+## Mark an Item as Complete
+
+- controller request handler that will take a todoItem, or a name of a todo item, or something unique to that todo item, so that it can mark it as complete
+- datalayer is going to need some way of exposing a todo item -- findTodoItemByName() findTodoItemByID()
+- models/TodoItem -> method to update the completed status of the TodoItem

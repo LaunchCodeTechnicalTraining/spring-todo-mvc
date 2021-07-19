@@ -6,6 +6,12 @@
 </head>
 <body>
 <!-- todoList ${todoList} -->
+<h3>Add a new Todo Item:</h3>
+<form method="post">
+    <label>New Item Name: <input type="text" name="value"></label>
+    <input type="submit" value="Add Item">
+</form>
+
 <h3>Todo Items:</h3>
 <th:block th:each="todoItem : ${todoList}">
     <ul>
