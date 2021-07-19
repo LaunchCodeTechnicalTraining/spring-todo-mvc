@@ -11,10 +11,10 @@ public class TodoMvcApplication {
 	public static void main(String[] args) {
 
 		// for manual testing purposes only
-		TodoListData.todoItems.add(new TodoItem("dishes"));
-		TodoListData.todoItems.add(new TodoItem("laundry"));
-		TodoListData.todoItems.add(new TodoItem("cook dinner"));
-		TodoListData.todoItems.add(new TodoItem("walk bernie"));
+		TodoListData.addTodoItem(new TodoItem("dishes"));
+		TodoListData.addTodoItem(new TodoItem("laundry"));
+		TodoListData.addTodoItem(new TodoItem("cook dinner"));
+		TodoListData.addTodoItem(new TodoItem("walk bernie"));
 		// end manual testing
 		SpringApplication.run(TodoMvcApplication.class, args);
 	}

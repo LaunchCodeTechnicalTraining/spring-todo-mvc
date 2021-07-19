@@ -19,3 +19,11 @@
   - /todo
     - GET /todo -> return the entire todolist
 
+## Add new items to TodoList
+
+- update TodoList
+    - right now it's public, it should probably be private -- and then we can add a static addTodItem method to interface with it
+    - add getAllTodoItems() method to the data layer
+    - create a new view with a form for adding a new Todo Item
+    - GET /todo -> update it has a form for adding new TodoItems
+    - POST /todo?name={todoName}

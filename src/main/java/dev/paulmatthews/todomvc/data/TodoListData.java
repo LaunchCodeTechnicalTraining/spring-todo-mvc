@@ -5,5 +5,13 @@ import dev.paulmatthews.todomvc.models.TodoItem;
 import java.util.ArrayList;
 
 public class TodoListData {
-    public static ArrayList<TodoItem> todoItems = new ArrayList<TodoItem>();
+    private static ArrayList<TodoItem> todoItems = new ArrayList<TodoItem>();
+
+    public static ArrayList<TodoItem> getAllTodoItems() {
+        return todoItems;
+    }
+
+    public static void addTodoItem(TodoItem todoItem) {
+        todoItems.add(todoItem);
+    }
 }

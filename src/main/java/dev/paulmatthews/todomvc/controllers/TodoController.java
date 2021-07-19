@@ -19,7 +19,7 @@ public class TodoController {
     public String getTodoItems(Model model) {
         // we know that we need to show them a representation of the list, so we need to pass that list to the thymeleaf engine, so it can build our HTML using that data!
         // how do we pass data to thymeleaf?
-        model.addAttribute("todoList", TodoListData.todoItems);
+        model.addAttribute("todoList", TodoListData.getAllTodoItems());
         return "todo";
     }
 }
