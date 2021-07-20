@@ -6,14 +6,18 @@
 <div class="container-fluid">
 <div th:replace="fragments :: menu"></div>
 <h3>Deleted Todo Items:</h3>
-<th:block th:each="todoItem : ${todoList}">
-  <ul>
-    <!--    <li th:text="'Name: ' + ${todoItem.getName()} + ' Completed: ' + ${todoItem.getCompleted()}"></li>-->
-    <li th:text="'ID: ' + ${todoItem.getId()}"></li>
-    <li th:text="'Name: ' + ${todoItem.getName()}"></li>
-    <li th:text="'Completed: ' + ${todoItem.getCompleted()}"></li>
-  </ul>
-</th:block>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Completed</th>
+    </tr>
+    <tr th:each="todoItem : ${todoList}">
+      <td th:text="${todoItem.getId()}"></td>
+      <td th:text="${todoItem.getName()}"></td>
+      <td th:text="${todoItem.getCompleted()}"></td>
+    </tr>
+  </table>
 </div>
 </body>
 </html>
